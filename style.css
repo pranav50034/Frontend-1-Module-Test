@@ -1,0 +1,462 @@
+:root{
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+  margin: 0;
+  padding:0;
+  font:inherit;
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #1a1c19;;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+/* Header */
+.head{
+    display: flex;
+    /* grid-template-columns: 60% 40%; */
+    border: 1px solid #B1A592;
+    justify-content: space-between;
+    align-content: center;
+    margin:1em;
+    border-radius: 5em;
+    padding: 0.3em;
+}
+.left{
+    display: flex;
+    /* grid-template-columns: 45% 20% 20% 15%; */
+    /* border:1px solid red; */
+    gap:.3em;
+    /* border: 1px solid red; */
+}
+.right{
+    display: grid;
+    /* border: 1px solid red; */
+    justify-content: flex-end;
+    /* border:1px solid red; */
+}
+.left .but{
+    display: flex;
+    justify-content: center;
+    color: #B1A592;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.9rem;
+    padding: 0.6em 0;
+}
+.left .one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #323025;
+    border-radius: 5em;
+    width:370px;
+}
+.left .two, .three, .four{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    border:.1rem solid #B1A592;
+    border-radius: 5em;
+}
+.left .two{
+    width:236px ;
+}
+.left .three{
+    width:207px ;
+}
+.left .four{
+    width:184px;
+}
+.right .five{
+    display: flex;
+    justify-content: center;
+    color: #B1A592;
+    font-weight: 600;
+    width: 184px;
+    font-size: 1.4rem;
+    line-height: 2.9rem;
+    padding: 0.6em 0;
+    background-color: transparent;
+    border:.1rem solid #B1A592;
+    border-radius: 5em;
+}
+.left .two:hover{
+    color:#1a1c19;
+    background-color: #e0d6c2;;
+}
+.left .three:hover{
+    color:#1a1c19;
+    background-color: #e0d6c2;;
+}
+.left .four:hover{
+    color:#1a1c19;
+    background-color: #e0d6c2;;
+}
+.right .five:hover{
+    color:#1a1c19;
+    background-color: #e0d6c2;;
+}
+
+@media(max-width:1220px){
+    .left .one{
+        width: 200px;
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin:0 1em;
+    gap:0.5%;
+    grid-auto-flow: column;
+}
+.onee{
+    background-color: #DFD6C5;
+    border-radius: 30px;
+    /* position: relative; */
+    grid-row: 1/3;
+    padding:1.8em 0;
+}
+.image1{
+    /* width: fit-content; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 30px;
+    height:70%;
+    /* outline: 1px solid red; */
+    margin : 0.5em 1.5em;
+    /* margin-right: 1.5em; */
+}
+.img1{
+    /* width: 100%;
+    
+    height: auto; */
+    object-fit: fit;
+}
+.foott{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 1.5em;
+    padding-top: .9em;
+    margin-bottom: .2em;
+    bottom: 1em;
+    margin-top:2em;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-top:1px solid #323025;
+    color: #323025;
+}
+
+.main button{
+    border-radius:50px ;
+    outline: none;
+    border: 1px solid #323025;
+    color:#323025;
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 0 .2em;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    margin-top: .8em;
+    margin-left: 2em;
+    margin-right:1.8em;
+    margin-bottom: .2em;
+}
+.main .title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 29.05px;
+    letter-spacing: -0.04em;
+    margin-left: 1.5em;
+    margin-right:1.8em;
+    margin-bottom: .2em;
+}
+.a .title{
+    margin-top:8em;
+}
+
+.twoe{
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.onee:hover .img1{
+    animation: zoom 1s ease forwards;
+}
+
+@keyframes zoom{
+    0%{
+        /* background-size: 100% */
+    }
+    100%{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+
+.twoe{
+    grid-column:2/4;
+    background-color: #8E886D;
+    border-radius: 30px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:2em;
+    margin-bottom: 2em;
+    width:55%;
+}
+
+.b{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8em 0;
+}
+.description{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin:2em;
+}
+/* .b>.image1{
+    height:100%;
+    width: 100%;
+    transform: scaleY(1.5);
+} */
+.d:hover .img4{
+    animation: zoom 1s ease forwards;
+}
+.twoe:hover .img2{
+    animation: zoom 1s ease forwards;
+}
+onee
+.image2{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 30px;
+    margin-right:1em;
+}
+.c{
+    background-color: #916E58;
+    border-radius: 30px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+.c .title{
+    font-size: 6rem;
+    margin-left:0.6em;
+    color:rgb(46, 27, 2);
+    margin-bottom: .01em;;
+}
+.cir{
+    width:10px;
+    height:10px;
+    color:rgb(46, 27, 2);
+}
+.cardHead{
+    display: flex;
+    justify-content: space-between;
+}
+.c .description{
+    margin:1.5em 1em;
+
+}
+.image3{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* border: 1px solid red; */
+    margin:3em;
+    border-radius: 30px;
+    margin-top:1em;
+}
+.c:hover .img3{
+    animation: zoom 1s ease forwards;
+}
+.d{
+    background-color: #B1A48E;
+    border-radius: 30px;
+    position: relative;
+}
+
+.aww{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    align-items: flex-start;
+}
+.img4{
+    /* width:100%; */
+    
+    /* border:1px solid red;  */
+    width:7em;
+    border-radius: 50%;
+}
+.image4{
+    display: inline-block;
+    /* border: 1px solid blue; */
+    margin-right: 2em;
+    margin-top: 2em;
+    border-radius: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.public{
+    display: flex;
+    justify-content: space-between;
+    margin:2em;
+    font-size: 1.4rem;
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+    border-bottom: 2px solid rgb(34, 17, 0);
+    border-top: 2px solid rgb(34, 17, 0);
+}
+
+@media (max-width:690px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+    }
+    .c{
+        grid-row: 1/3;
+        width: 100%;
+    }
+}
+
+
+@media (max-width:1050px) {
+    .left .two, .left .three, .left .four{
+        display: none;;
+    }
+    .main{
+        grid-template-columns:50% ;
+    }
+    .onee{
+        grid-column: 1/3;
+        grid-row:1/2;
+    }
+    .twoe{
+        grid-column: 1/3;
+        grid-row:2/3;
+    }
+    .threee{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .foure{
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    .left .one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+    }
+    .image2{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .image1{
+        width:96%;
+        /* padding-left : 2%;
+        padding-right: 2%; */
+        height:30%;
+        /* border:1px solid red; */
+    }
+    .img1{
+        
+        width: 100%;
+        padding:0;
+    }
+    .left{
+        width: 100%;
+    } 
+    .image{
+        width:100%;
+        /* border: 1px solid rebeccapurple; */
+        object-fit: cover;
+        height:50vh;
+        margin: 0;
+        object-fit: fill;
+    }
+}
